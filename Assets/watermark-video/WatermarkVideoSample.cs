@@ -9,34 +9,43 @@ namespace VideoKit.Examples {
     using UnityEngine;
     using UnityEngine.Video;
     using Unity.Collections;
-    using VideoKit.Clocks;
     using UnityEngine.UI;
 
     public sealed class WatermarkVideoSample : MonoBehaviour {
 
         [Header(@"Watermarking")]
         public Texture2D watermark;
-        public RectInt rect;
+        public Vector2Int position;
 
         [Header(@"Playback")]
         public VideoPlayer videoPlayer;
         public RawImage rawImage;
         public AspectRatioFitter aspectFitter;
     
-        private async void Start () { // INCOMPLETE
+        private async void Start () {
             // Watermark video
-            var video = await MediaAsset.FromStreamingAssets(@"video.mp4");
-            var result = await WatermarkVideo(video, watermark, rect);
-            // Playback result
+            var video = await MediaAsset.FromStreamingAssets(@"4088192-hd_1920_1080_25fps.mp4");
+            var result = await WatermarkVideo(video, watermark, position);
+            Debug.Log(result.path);
+            // Prepare
             videoPlayer.url = result.path;
             videoPlayer.Prepare();
+            while (!videoPlayer.isPrepared)
+                await Task.Yield();
+            // Display
+            rawImage.texture = videoPlayer.texture;
+            aspectFitter.aspectRatio = (float)videoPlayer.width / videoPlayer.height;
+            // Playback
+            videoPlayer.Play();
         }
 
-        private static async Task<MediaAsset> WatermarkVideo ( // INCOMPLETE // Watermark pls
+        private static async Task<MediaAsset> WatermarkVideo (
             MediaAsset video,
             Texture2D watermark,
-            RectInt rect
+            Vector2Int position
         ) {
+            // Create watermark buffer
+            using var watermarkBuffer = new PixelBuffer(watermark);
             // Create destination recorder
             var recorder = await MediaRecorder.Create(
                 MediaRecorder.Format.MP4,
@@ -44,8 +53,7 @@ namespace VideoKit.Examples {
                 video.height,
                 video.frameRate
             );
-            var clock = new FixedClock(video.frameRate);
-            using var frameData = new NativeArray<byte>(video.width * video.height * 4, Allocator.Persistent);
+            using var rgbaData = new NativeArray<byte>(video.width * video.height * 4, Allocator.Persistent);
             // Read frames in the video
             foreach (var pixelBuffer in video.Read<PixelBuffer>()) {
                 // Convert to `RGBA8888`
@@ -53,11 +61,13 @@ namespace VideoKit.Examples {
                     video.width,
                     video.height,
                     PixelBuffer.Format.RGBA8888,
-                    frameData
+                    rgbaData,
+                    timestamp: pixelBuffer.timestamp
                 );
                 pixelBuffer.CopyTo(rgbaBuffer);
                 // Add watermark
-                
+                using var watermarkRegion = rgbaBuffer.Region(position.x, position.y, watermark.width, watermark.height);
+                watermarkRegion.CopyTo(watermarkBuffer, watermarkRegion);
                 // Append to the recorder
                 recorder.Append(rgbaBuffer);
             }

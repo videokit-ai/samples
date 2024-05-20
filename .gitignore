@@ -19,5 +19,9 @@ ProjectSettings/NatMLHub.asset
 # VideoKit
 ProjectSettings/VideoKit.asset
 
+# Recordings
+/*.mp4
+/*.wav
+
 # Misc
 .DS_Store
