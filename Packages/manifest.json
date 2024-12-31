@@ -1,20 +1,24 @@
 {
   "scopedRegistries": [
     {
-      "name": "NatML",
+      "name": "VideoKit",
       "url": "https://registry.npmjs.com",
-      "scopes": [
-        "ai.natml",
-        "ai.fxn"
-      ]
+      "scopes": ["ai.videokit"]
+    },
+    {
+      "name": "Function",
+      "url": "https://registry.npmjs.com",
+      "scopes": ["ai.fxn"]
     }
   ],
   "dependencies": {
-    "ai.natml.videokit": "0.0.18-alpha.13",
-    "com.unity.feature.development": "1.0.1",
-    "com.unity.textmeshpro": "3.0.6",
-    "com.unity.ugui": "1.0.0",
-    "com.unity.visualscripting": "1.9.2",
+    "ai.videokit.videokit": "0.0.23-alpha.1",
+    "com.unity.feature.development": "1.0.2",
+    "com.unity.multiplayer.center": "1.0.0",
+    "com.unity.toolchain.macos-x86_64-linux-x86_64": "2.0.10",
+    "com.unity.ugui": "2.0.0",
+    "com.unity.visualscripting": "1.9.5",
+    "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.audio": "1.0.0",
     "com.unity.modules.imageconversion": "1.0.0",

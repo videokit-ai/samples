@@ -7,17 +7,17 @@ This project is a collection of samples showing how to build interactive experie
 ## Supported Platforms
 - Android API level 24+
 - iOS 14+
-- macOS 11+ (Apple Silicon and macOS)
+- macOS 12+ (Apple Silicon and macOS)
 - Windows 10+ (64-bit only)
-- WebGL:
+- WebGL (requires Unity 6):
     - Chrome 91+
     - Firefox 90+
     - Safari 16.4+
 
 ## Resources
-- Join the [NatML community on Discord](https://hub.natml.ai/community).
-- See the [NatML documentation](https://docs.natml.ai/unity).
-- Check out [NatML on GitHub](https://github.com/natmlx).
-- Contact us at [hi@natml.ai](mailto:hi@natml.ai).
+- Join the [VideoKit community on Discord](https://www.videokit.ai/community).
+- See the [VideoKit documentation](https://www.videokit.ai).
+- Check out [VideoKit on GitHub](https://github.com/videokit-ai).
+- Contact us at [hi@videokit.ai](mailto:hi@videokit.ai).
 
 Thank you very much!
