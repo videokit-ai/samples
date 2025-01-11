@@ -187,7 +187,7 @@ MonoBehaviour:
   format: 0
   prepareOnAwake: 1
   videoMode: 1
-  resolution: 1
+  resolution: 7
   customResolution: {x: 1280, y: 720}
   cameras:
   - {fileID: 1422234650}
@@ -208,7 +208,7 @@ MonoBehaviour:
   configureAudioManager: 1
   audioListener: {fileID: 1422234649}
   audioSource: {fileID: 0}
-  recordingAction: 2
+  recordingAction: 0
   OnRecordingCompleted:
     m_PersistentCalls:
       m_Calls: []

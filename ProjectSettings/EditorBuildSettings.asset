@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/slow-motion-capture/SlowMotionCapture.unity
+    guid: 65e99cc833cdd41f2b10f3c2099da532
+  - enabled: 0
+    path: Assets/video-recording/VideoRecording.unity
+    guid: 62f6bc1c2f29c4003a633be82736daca
+  - enabled: 1
+    path: Assets/photo-capture/PhotoCapture.unity
+    guid: 3be8376c3f6974fd3b338aebe6aed405
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

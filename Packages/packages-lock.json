@@ -10,13 +10,12 @@
       "url": "https://registry.npmjs.com"
     },
     "ai.videokit.videokit": {
-      "version": "0.0.23-alpha.2",
+      "version": "file:/Users/yusuf/Documents/Projects/vkt3d/videokit/Packages/ai.videokit.videokit",
       "depth": 0,
-      "source": "registry",
+      "source": "local",
       "dependencies": {
         "ai.fxn.fxn3d": "0.0.33"
-      },
-      "url": "https://registry.npmjs.com"
+      }
     },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",

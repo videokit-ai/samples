@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraManager: {fileID: 399379900}
   cameraView: {fileID: 1452785145}
-  flashMode: 0
+  flashMode: 2
   photoView: {fileID: 1479117498}
 --- !u!1 &415182916
 GameObject:

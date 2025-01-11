@@ -41,7 +41,9 @@ namespace VideoKit.Samples {
         private async void OnCapturePhoto (PixelBuffer pixelBuffer) {
             // Copy the photo into a RGBA32 buffer
             var rotation = cameraView.rotation;
-            var portrait = rotation == PixelBuffer.Rotation._90 || rotation == PixelBuffer.Rotation._270;
+            var portrait = 
+                rotation == PixelBuffer.Rotation._90 ||
+                rotation == PixelBuffer.Rotation._270;
             var width = portrait ? pixelBuffer.height : pixelBuffer.width;
             var height = portrait ? pixelBuffer.width : pixelBuffer.height;
             using var data = new NativeArray<byte>(width * height * 4, Allocator.Persistent);
