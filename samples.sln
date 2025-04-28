@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7B33B9A9-7177-8914-7D92-F11716EFFA39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoKit.Runtime", "VideoKit.Runtime.csproj", "{415125E9-A35A-90AC-1833-95ABCA9B58B1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoKit.Editor", "VideoKit.Editor.csproj", "{C7C82166-E4E8-079E-A598-A5EDA02D376E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,14 +13,6 @@ Global
 		{7B33B9A9-7177-8914-7D92-F11716EFFA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B33B9A9-7177-8914-7D92-F11716EFFA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B33B9A9-7177-8914-7D92-F11716EFFA39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{415125E9-A35A-90AC-1833-95ABCA9B58B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{415125E9-A35A-90AC-1833-95ABCA9B58B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{415125E9-A35A-90AC-1833-95ABCA9B58B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{415125E9-A35A-90AC-1833-95ABCA9B58B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7C82166-E4E8-079E-A598-A5EDA02D376E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7C82166-E4E8-079E-A598-A5EDA02D376E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7C82166-E4E8-079E-A598-A5EDA02D376E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7C82166-E4E8-079E-A598-A5EDA02D376E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,7 @@ Logs/
 
 # Function
 ProjectSettings/Function.asset
+UserSettings/Function.asset
 
 # NatML
 ProjectSettings/NatML.asset
@@ -19,10 +20,13 @@ ProjectSettings/NatMLHub.asset
 
 # VideoKit
 ProjectSettings/VideoKit.asset
+UserSettings/VideoKit.asset
 
 # Recordings
 /*.mp4
 /*.wav
+recordings/*.mp4
+recordings/*.wav
 
 # Misc
 .DS_Store

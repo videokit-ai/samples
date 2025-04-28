@@ -3,21 +3,26 @@
     {
       "name": "VideoKit",
       "url": "https://registry.npmjs.com",
-      "scopes": ["ai.videokit"]
+      "scopes": [
+        "ai.videokit"
+      ]
     },
     {
       "name": "Function",
       "url": "https://registry.npmjs.com",
-      "scopes": ["ai.fxn"]
+      "scopes": [
+        "ai.fxn"
+      ]
     }
   ],
   "dependencies": {
-    "ai.videokit.videokit": "0.0.23-alpha.8",
+    "ai.videokit.videokit": "1.0.0-alpha.3",
     "com.unity.feature.development": "1.0.2",
     "com.unity.multiplayer.center": "1.0.0",
+    "com.unity.toolchain.macos-arm64-linux-x86_64": "2.0.4",
     "com.unity.toolchain.macos-x86_64-linux-x86_64": "2.0.10",
     "com.unity.ugui": "2.0.0",
-    "com.unity.visualscripting": "1.9.5",
+    "com.unity.visualscripting": "1.9.6",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.audio": "1.0.0",
